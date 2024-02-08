@@ -1,0 +1,19 @@
+name: Deploy HTML file to Nginx
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: Deploy HTML file
+    runs-on: self-hosted
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Deploy HTML file to Nginx
+        run: |
+          # Example: Copy HTML file to Nginx directory
+          sudo cp index.html /var/www/html/
