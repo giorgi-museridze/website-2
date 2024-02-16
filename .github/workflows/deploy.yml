@@ -16,4 +16,4 @@ jobs:
       - name: Deploy HTML file to Nginx
         run: |
           # Example: Copy HTML file to Nginx directory
-          cp index.html /var/www/html/
+          sudo cp index.html /var/www/html/
